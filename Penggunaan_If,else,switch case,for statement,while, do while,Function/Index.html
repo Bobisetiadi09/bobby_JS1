@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengunaan if</title>
+</head>
+<body>
+    <h2>JavaScript if</h2>
+
+<p>Tampilkan "Selamat Malam" jika jam Lebih dari 19:00 dan selamat siang jika jam kurang dari 19:00</p>
+
+<p id="Malam">Selamat Siang!</p>
+<script>
+if (new Date().getHours() > 19) {
+  document.getElementById("Malam").innerHTML = "Selamat malam!";
+}
+</script>
+
+<h2>JavaScript if .. else</h2>
+
+<p>Pengucapan salam berdasarkan waktu kegiatan kita</p>
+
+<p id="Tes"></p>
+
+<p id="demo"></p>
+
+<script>
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 18) {
+  Pengucapan = "Selamat Siang";
+} else {
+  Pengucapan = "Selamat Malam";
+}
+
+document.getElementById("demo").innerHTML = Pengucapan;
+</script>
+
+<h2>JavaScript switch</h2>
+
+<p id="day"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    hari = "senin";
+    break;
+  case 1:
+    hari = "selasa";
+    break;
+  case 2:
+    hari = "rabu";
+    break;
+  case 3:
+    hari = "kamis";
+    break;
+  case 4:
+    hari = "jumat";
+    break;
+  case 5:
+    hari = "sabtu";
+    break;
+  case  6:
+    hari = "minggu";
+}
+document.getElementById("day").innerHTML = "Hari ini " + hari;
+</script>
+
+<h1>JavaScript Statements</h1>
+<h2>The for Loop</h2>
+
+<p id="number"></p>
+
+<script>
+let text = "";
+for (let i = 0; i < 3; i++) {
+  text += i + "<br>";
+}
+document.getElementById("number").innerHTML = text;
+</script>
+
+<h1>JavaScript Statements</h1>
+<h2>The while Statement</h2>
+
+<p>Loop (iterate over) sebuah array untuk mengumpulkan nama-nama lingkaran motor:</p>
+
+<p id="mobil"></p>
+
+<script>
+const motorcircle = ["kawasaki", "honda", "yamaha", "KTM"];
+let text = "";
+let i = 0;
+while (i < motorcircle.length) {
+  text += motorcircle[i] + "<br>";
+  i++;
+}
+document.getElementById("mobil").innerHTML = text;
+</script>
+
+<h1>JavaScript Statements</h1>
+<h2>The do..while Loop</h2>
+
+<p id="contoh"></p>
+
+<script>
+let text = "";
+let i = 0;
+do {
+  text += i + "<br>";
+  i++;
+}
+while (i < 4);
+document.getElementById("contoh").innerHTML = text;
+</script>
+
+<h1>JavaScript function</h1>
+<h2>Pernyataan pengembalian</h2>
+
+<p>Panggil fungsi yang mengembalikan nilai:</p>
+
+<p id="satu"></p>
+
+<script>
+function myFunction() {
+  return Math.PI;
+}
+
+document.getElementById("satu").innerHTML = myFunction();
+</script>
+
+
+    
+</body>
+</html>
